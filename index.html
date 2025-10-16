@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Conexión CaféTech — Portada</title>
+
+  <!-- Fuentes -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg1: #a8edea;
+      --bg2: #fed6e3;
+      --accent: #17a2b8;
+      --brown: #4a2f27;
+      --muted: #6b6b6b;
+    }
+
+    *{margin:0;padding:0;box-sizing:border-box;}
+
+    body{
+      font-family:"Open Sans",sans-serif;
+      color:#222;
+      background:linear-gradient(135deg,var(--bg1),var(--bg2));
+    }
+
+    /* ----- PORTADA HERO ----- */
+    .hero{
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:60px 20px;
+      background:rgba(255,255,255,0.8);
+    }
+
+    .logo{
+      width:160px;
+      margin-bottom:20px;
+      animation:float 3s ease-in-out infinite;
+    }
+
+    @keyframes float{
+      0%,100%{transform:translateY(0);}
+      50%{transform:translateY(-8px);}
+    }
+
+    h1.brand{
+      font-family:"Montserrat",sans-serif;
+      color:var(--brown);
+      font-size:52px;
+      margin-bottom:4px;
+    }
+
+    h2.brand-sub{
+      font-family:"Montserrat",sans-serif;
+      color:var(--brown);
+      font-size:28px;
+      margin-bottom:14px;
+    }
+
+    .accent-line{
+      height:5px;
+      width:80px;
+      background:linear-gradient(90deg,var(--accent),rgba(23,162,184,0.6));
+      border-radius:5px;
+      margin:10px auto 30px;
+    }
+
+    p.slogan{
+      font-size:18px;
+      color:#333;
+      max-width:600px;
+      line-height:1.6;
+      margin-bottom:30px;
+    }
+
+    .menu-button{
+      background-color:var(--accent);
+      color:white;
+      border:none;
+      padding:14px 36px;
+      border-radius:10px;
+      font-size:18px;
+      font-weight:600;
+      cursor:pointer;
+      transition:0.3s;
+      box-shadow:0 6px 20px rgba(23,162,184,0.4);
+    }
+
+    .menu-button:hover{
+      background-color:#1492a6;
+      transform:scale(1.05);
+    }
+
+    /* ----- SECCIÓN OFRECEMOS ----- */
+    section.ofrecemos{
+      padding:80px 20px;
+      background:white;
+      text-align:center;
+    }
+
+    section.ofrecemos h2{
+      font-family:"Montserrat",sans-serif;
+      color:var(--brown);
+      font-size:36px;
+      margin-bottom:10px;
+    }
+
+    section.ofrecemos p.desc{
+      color:var(--muted);
+      font-size:17px;
+      margin-bottom:40px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:30px;
+      max-width:1000px;
+      margin:0 auto;
+    }
+
+    .card{
+      background:#f9f9f9;
+      border-radius:16px;
+      box-shadow:0 6px 18px rgba(0,0,0,0.08);
+      overflow:hidden;
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-6px);
+      box-shadow:0 10px 24px rgba(0,0,0,0.15);
+    }
+
+    .card img{
+      width:100%;
+      height:180px;
+      object-fit:cover;
+    }
+
+    .card h3{
+      font-family:"Montserrat",sans-serif;
+      color:var(--brown);
+      margin:18px 0 8px;
+    }
+
+    .card p{
+      padding:0 18px 20px;
+      font-size:15px;
+      color:#444;
+      line-height:1.5;
+    }
+
+    footer{
+      background:#222;
+      color:#ddd;
+      text-align:center;
+      padding:20px;
+      font-size:14px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- PORTADA PRINCIPAL -->
+  <section class="hero">
+    <div class="logo">
+      <!-- SVG logo -->
+      <svg width="140" height="100" viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 62 C12 40 26 24 50 24 H92 C116 24 130 40 130 62 V74 C130 84 110 86 92 86 H50 C28 86 12 76 12 62 Z"
+              fill="none" stroke="#4a2f27" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M122 34 C134 34 138 48 126 56" fill="none" stroke="#4a2f27" stroke-width="6" stroke-linecap="round"/>
+        <path d="M40 8 C60 -8 100 -8 120 8" fill="none" stroke="#17a2b8" stroke-width="8" stroke-linecap="round"/>
+        <path d="M52 20 C66 8 94 8 108 20" fill="none" stroke="#17a2b8" stroke-width="6" stroke-linecap="round"/>
+        <path d="M64 32 C76 20 84 20 96 32" fill="none" stroke="#17a2b8" stroke-width="4" stroke-linecap="round"/>
+      </svg>
+    </div>
+
+    <h1 class="brand">Conexión</h1>
+    <h2 class="brand-sub">CaféTech</h2>
+    <div class="accent-line"></div>
+
+    <p class="slogan">
+      Disfruta del mejor café mientras conectas ideas, proyectos y talento en un ambiente tech y creativo.
+    </p>
+
+    <a href="menu.html" class="volver">⬅ Volver a la página principal</a>
+  </section>
+
+  <!-- SECCIÓN DE OFRECEMOS -->
+  <section class="ofrecemos">
+    <h2>Lo que ofrecemos</h2>
+    <p class="desc">Un espacio pensado para amantes del café, la creatividad y la tecnología.</p>
+
+    <div class="grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=60" alt="Café de especialidad">
+        <h3>Café de especialidad</h3>
+        <p>Cada taza es preparada con granos seleccionados y tostados artesanalmente para ofrecerte el mejor sabor.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://th.bing.com/th/id/R.bce506fafae0b04689afa39f9a4acedd?rik=kxWVKTO2b79naA&pid=ImgRaw&r=0" alt="Espacio de coworking">
+        <h3>Espacios de coworking</h3>
+        <p>Ambientes cómodos con Wi-Fi rápido, enchufes y mesas para trabajar o estudiar acompañado de un buen café.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=60" alt="Talleres tecnológicos">
+        <h3>Talleres tecnológicos</h3>
+        <p>Participa en micro-talleres de programación, diseño y marketing digital para potenciar tus habilidades.</p>
+      </div>
+
+      <div class="card">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.98uZvwCjHC-emxsqSS6VYAHaEp?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Menú saludable">
+        <h3>Menú saludable</h3>
+        <p>Snacks, postres y bebidas con opciones veganas y saludables para disfrutar sin culpa.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+     Conexión CaféTech — Inspirando mentes digitales 
+  </footer>
+</body>
+</html>
+     
